@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Новогодняя открытка</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+    <header class="header">
+   <div class="logo"><img src="img/depositphotos_7845131-stock-photo-art-snowy-christmas-tree.jpg" width="120" height="90" alt="a lover of books"></div>
+    <nav class="main-menu"><ul>
+      <li><a>Главная</a></li>
+      <li><a href="evidence.html">Интересные факты</a></li>  
+    </ul>
+    </nav>
+  </header>
+      <main>
+      
+      <!-- первая часть счетчика -->
+   <center><div align="center" style="padding:1px; border: 4px double blue; width: 768px; height: 512px;">
+<a href="##"><img src="img/skoblovotkritra-2000.1500.jpg" border="0" /></a>
+<div align="center" style="width: 768px;"><span style="font: 12pt sans-serif;  color: #0000CC ">До Нового Года осталось
+ <b><div align="center"><br />
+<!-- завершение первая часть счетчика -->
+
+<!-- начало вторая часть счетчика -->
+<script language="javascript">
+function cdtime(container, targetdate){
+ if (!document.getElementById || !document.getElementById(container)) return
+ this.container=document.getElementById(container)
+ this.currentTime=new Date()
+ this.targetdate=new Date(targetdate)
+ this.timesup=false
+ this.updateTime()
+ }
+ cdtime.prototype.updateTime=function(){
+ var thisobj=this
+ this.currentTime.setSeconds(this.currentTime.getSeconds()+1)
+ setTimeout(function(){thisobj.updateTime()}, 1000)
+ }
+ cdtime.prototype.displaycountdown=function(baseunit, functionref){
+ this.baseunit=baseunit
+ this.formatresults=functionref
+ this.showresults()
+ }
+ cdtime.prototype.showresults=function(){
+ var thisobj=this
+ var timediff=(this.targetdate-this.currentTime)/1000
+ if (timediff<0){
+ this.timesup=true
+ this.container.innerHTML=this.formatresults()
+ return
+ }
+ var oneMinute=60
+ var oneHour=60*60
+ var oneDay=60*60*24
+ var dayfield=Math.floor(timediff/oneDay)
+ var hourfield=Math.floor((timediff-dayfield*oneDay)/oneHour)
+ var minutefield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour)/oneMinute)
+ var secondfield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour-minutefield*oneMinute))
+ if (this.baseunit=="hours"){
+ hourfield=dayfield*24+hourfield
+ dayfield="n/a"
+ }
+ else if (this.baseunit=="minutes"){
+ minutefield=dayfield*24*60+hourfield*60+minutefield
+ dayfield=hourfield="n/a"
+ }
+ else if (this.baseunit=="seconds"){
+ var secondfield=timediff
+ dayfield=hourfield=minutefield="n/a"
+ }
+ this.container.innerHTML=this.formatresults(dayfield, hourfield, minutefield, secondfield)
+ setTimeout(function(){thisobj.showresults()}, 1000)
+ }
+ function formatresults2(){
+ if (this.timesup==false){
+ var displaystring="<span class='nonewyear'>"+arguments[0]+" Дней "+arguments[1]+" Часов<br>"+arguments[2]+" Минут "+arguments[3]+" Секунд</span> "
+ }
+ else{
+ var displaystring="<span class='newyear1'>С Новым годом!!!</span>"
+ //alert("С Новым годом!!!")
+ }
+ return displaystring
+ }
+ </script>
+
+ <div id="countdowncontainer2"></div>
+ <script type="text/javascript">
+ var currentyear=new Date().getFullYear()
+ var thischristmasyear=(new Date().getMonth()==0 && new Date().getDate()==1)? currentyear : currentyear + 1
+ var christmas=new cdtime("countdowncontainer2", "january 1, "+thischristmasyear+" 0:0:00")
+ christmas.displaycountdown("days", formatresults2)
+</script></div></b></span></div></div></center><b></b>
+<!-- завершение второй части счетчика -->
+          
+      <article class="blog-entry">
+          <section class="idea">
+            <p></p>
+            <p></p>
+</section>
+    
+    </article>
+    </main>
+  <footer class="page-footer">
+      <div class="info"><img src="img/ris768x512.jpg" width="75" height="50" alt="ДРУГ">
+    Скоблов Виталий, vitalik2007_skoblov@mail.ru</div>
+    <div class="copyright">
+    © 2021-2022 Live smiling
+    </div>
+    </footer>
+  </body>
+</html>
+
+
+
